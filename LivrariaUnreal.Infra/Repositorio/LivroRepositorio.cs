@@ -1,11 +1,10 @@
-﻿using LivrariaUnreal.Dominio.Interfaces.Repositorio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LivrariaUnreal.Dominio.Entidades;
+﻿using LivrariaUnreal.Dominio.Entidades;
 using LivrariaUnreal.Infra.Contexto;
+using LivrariaUnreal.Infra.Repositorio.Interface;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System;
 
 namespace LivrariaUnreal.Infra.Repositorio
 {
@@ -25,22 +24,32 @@ namespace LivrariaUnreal.Infra.Repositorio
 
         public void Atualizar(Livro entidade)
         {
-            throw new NotImplementedException();
+            _db.Entry(entidade).State = EntityState.Modified;
         }
 
         public void Excluir(int[] ids)
         {
-            throw new NotImplementedException();
+            foreach (var item in ids)
+            {
+                var livro = ObterPorId(item);
+                _db.Set<Livro>().Remove(livro);
+            }            
+        }
+
+        public void Excluir(int id)
+        {
+            var livro = ObterPorId(id);
+            _db.Set<Livro>().Remove(livro);
         }
 
         public Livro ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            return _db.Set<Livro>().Find(id);
         }
 
-        public IList<Livro> ObterTodos()
+        public IQueryable<Livro> ObterTodos()
         {
-            throw new NotImplementedException();
+            return _db.Set<Livro>().AsQueryable();
         }
     }
 }

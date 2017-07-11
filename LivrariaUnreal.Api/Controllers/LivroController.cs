@@ -30,29 +30,54 @@ namespace LivrariaUnreal.Api.Controllers
         public HttpResponseMessage Criar()
             => Request.CreateResponse(HttpStatusCode.OK, _livroQuery.ObterParaCriacao());
 
-        [HttpGet, Route("{id:int}")]
-        public HttpResponseMessage Editar(int id)
+        [HttpPost, Route]
+        public HttpResponseMessage Criar(LivroRequest request)
         {
             try
             {
-                if (id <= 0)
-                {
-                    return Request.CreateResponse(HttpStatusCode.NotFound);
-                }
-                return Request.CreateResponse(HttpStatusCode.OK, _livroQuery.ObterParaEdicao(id));
+                _livroAplicacao.Persistir(request);
+                return Request.CreateResponse(HttpStatusCode.OK, "");
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
             }
-            
+
         }
 
-        [HttpPost, Route]
-        public HttpResponseMessage Create([FromBody] Livro request)
+        [HttpGet, Route("{id:int}")]
+        public HttpResponseMessage Editar(int id)
+            => Request.CreateResponse(HttpStatusCode.OK, _livroQuery.ObterParaEdicao(id));
+
+        [HttpPut, Route]
+        public HttpResponseMessage Editar(LivroRequest request)
         {
-            _livroAplicacao.Adicionar(request);
-            return Request.CreateResponse(HttpStatusCode.OK, "");
+            try
+            {
+                _livroAplicacao.Persistir(request);
+                return Request.CreateResponse(HttpStatusCode.OK, "");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }
+
+        }
+
+        [HttpDelete]
+        [Route("")]
+        public HttpResponseMessage Delete(int[] ids)
+        {
+            try
+            {
+                _livroAplicacao.Excluir(ids);
+
+                return Request.CreateResponse(HttpStatusCode.OK, "");
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+            }            
         }
     }
 }

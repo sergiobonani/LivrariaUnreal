@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\Interface\ILivroRepositorio.cs" />
     <Compile Include="Repositorio\LivroRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

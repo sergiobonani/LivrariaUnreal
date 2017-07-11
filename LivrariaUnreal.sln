@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15 
+# Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{5A971503-1799-4D47-A337-AB05CE35BB39}"
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaUnreal.Facade", "LivrariaUnreal.Facade\LivrariaUnreal.Facade.csproj", "{55E17518-D779-41B2-9CCC-B091CDE0EF45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaUnreal.Infra", "LivrariaUnreal.Infra\LivrariaUnreal.Infra.csproj", "{3B7A6324-86E7-496D-8355-FF4B15BFF81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaUnreal.Recursos", "Recursos\LivrariaUnreal.Recursos.csproj", "{5929F0F3-8CDF-436F-BB04-065DF06B8154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaUnreal.Negocio.Teste", "LivrariaUnreal.Negocio.Teste\LivrariaUnreal.Negocio.Teste.csproj", "{92A6E219-F812-4EDC-B522-5E1D4526975D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{3B7A6324-86E7-496D-8355-FF4B15BFF81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B7A6324-86E7-496D-8355-FF4B15BFF81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B7A6324-86E7-496D-8355-FF4B15BFF81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5929F0F3-8CDF-436F-BB04-065DF06B8154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5929F0F3-8CDF-436F-BB04-065DF06B8154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5929F0F3-8CDF-436F-BB04-065DF06B8154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5929F0F3-8CDF-436F-BB04-065DF06B8154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A6E219-F812-4EDC-B522-5E1D4526975D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A6E219-F812-4EDC-B522-5E1D4526975D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A6E219-F812-4EDC-B522-5E1D4526975D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A6E219-F812-4EDC-B522-5E1D4526975D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +76,7 @@ Global
 		{F5730D49-079F-477C-9AF2-D9BBED092DE3} = {800531EE-1D13-4E90-9441-857C48E2CD03}
 		{55E17518-D779-41B2-9CCC-B091CDE0EF45} = {800531EE-1D13-4E90-9441-857C48E2CD03}
 		{3B7A6324-86E7-496D-8355-FF4B15BFF81B} = {EC776F73-D507-4799-89DB-9E9AB38A0126}
+		{5929F0F3-8CDF-436F-BB04-065DF06B8154} = {EC776F73-D507-4799-89DB-9E9AB38A0126}
+		{92A6E219-F812-4EDC-B522-5E1D4526975D} = {800531EE-1D13-4E90-9441-857C48E2CD03}
 	EndGlobalSection
 EndGlobal

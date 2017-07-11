@@ -1,7 +1,8 @@
 ﻿using LivrariaUnreal.Dominio.Entidades;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace LivrariaUnreal.Dominio.Interfaces.Repositorio
+namespace LivrariaUnreal.Infra.Repositorio.Interface
 {
     public interface ILivroRepositorio
     {
@@ -11,8 +12,10 @@ namespace LivrariaUnreal.Dominio.Interfaces.Repositorio
 
         void Excluir(int[] ids);
 
+        void Excluir(int id);
+
         Livro ObterPorId(int id);
 
-        IList<Livro> ObterTodos();        
+        IQueryable<Livro> ObterTodos();        
     }
 }

@@ -51,6 +51,10 @@
       <Project>{f32fd7ce-3945-4350-b91d-d81c5dea8b68}</Project>
       <Name>LivrariaUnreal.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LivrariaUnreal.Infra\LivrariaUnreal.Infra.csproj">
+      <Project>{3b7a6324-86e7-496d-8355-ff4b15bff81b}</Project>
+      <Name>LivrariaUnreal.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

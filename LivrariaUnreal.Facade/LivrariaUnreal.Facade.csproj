@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Livro\Factory\ILivroFactory.cs" />
+    <Compile Include="Livro\Interface\ILivroFactory.cs" />
+    <Compile Include="Livro\LivroFactory.cs" />
     <Compile Include="Livro\Request\LivroRequest.cs" />
-    <Compile Include="Livro\Service\ILivroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

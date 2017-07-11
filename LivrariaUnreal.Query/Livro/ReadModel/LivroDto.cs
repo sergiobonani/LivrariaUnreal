@@ -7,8 +7,11 @@
 
         public LivroDto(Dominio.Entidades.Livro entidade)
         {
+            Id = entidade.Id;
             Descricao = entidade.Descricao;
         }
+
+        public int Id { get; set; }
 
         public string Descricao { get; set; }
     }

@@ -1,14 +1,16 @@
-﻿using System.ComponentModel;
+﻿using Recursos;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace LivrariaUnreal.Dominio.ObjetoDeValor
 {
     public enum TipoLivro
     {
-        [Description("Romance")]
+        [Display(Name = nameof(Geral.Romance), ResourceType = typeof(Recursos.Geral))]
         Romance = 1,
-        [Description("Fição")]
+        [Display(Name = nameof(Geral.Ficcao), ResourceType = typeof(Recursos.Geral))]
         Ficacao = 2,
-        [Description("Monografia")]
+        [Display(Name = nameof(Geral.Monografia), ResourceType = typeof(Recursos.Geral))]
         Monografia = 3    
     }
 }

@@ -41,13 +41,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Livro\Interface\ILivroAplicacao.cs" />
+    <Compile Include="Livro\Interface\ILivroValidator.cs" />
     <Compile Include="Livro\LivroAplicacao.cs" />
+    <Compile Include="Livro\LivroValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LivrariaUnreal.Dominio\LivrariaUnreal.Dominio.csproj">
       <Project>{f32fd7ce-3945-4350-b91d-d81c5dea8b68}</Project>
       <Name>LivrariaUnreal.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LivrariaUnreal.Facade\LivrariaUnreal.Facade.csproj">
+      <Project>{55e17518-d779-41b2-9ccc-b091cde0ef45}</Project>
+      <Name>LivrariaUnreal.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LivrariaUnreal.Infra\LivrariaUnreal.Infra.csproj">
+      <Project>{3B7A6324-86E7-496D-8355-FF4B15BFF81B}</Project>
+      <Name>LivrariaUnreal.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Recursos\LivrariaUnreal.Recursos.csproj">
+      <Project>{5929f0f3-8cdf-436f-bb04-065df06b8154}</Project>
+      <Name>LivrariaUnreal.Recursos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using LivrariaUnreal.Facade.Livro.Request;
 
-namespace LivrariaUnreal.Facade.Livro.Factory
+namespace LivrariaUnreal.Facade.Livro.Interface
 {
     public interface ILivroFactory
     {

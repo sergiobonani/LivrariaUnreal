@@ -1,5 +1,7 @@
-﻿using LivrariaUnreal.Dominio.Interfaces.Repositorio;
+﻿using LivrariaUnreal.Facade.Livro;
+using LivrariaUnreal.Facade.Livro.Interface;
 using LivrariaUnreal.Infra.Repositorio;
+using LivrariaUnreal.Infra.Repositorio.Interface;
 using LivrariaUnreal.Negocio.Livro;
 using LivrariaUnreal.Negocio.Livro.Interface;
 using LivrariaUnreal.Query.Livro;
@@ -15,10 +17,15 @@ namespace LivrariaUnreal.Api
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
+
             var container = new UnityContainer();
+
             container.RegisterType<ILivroQuery, LivroQuery>();
             container.RegisterType<ILivroRepositorio, LivroRepositorio>();
             container.RegisterType<ILivroAplicacao, LivroAplicacao>();
+            container.RegisterType<ILivroValidator, LivroValidator>();
+            container.RegisterType<ILivroFactory, LivroFactory>();
+
             config.DependencyResolver = new UnityDependencyResolver(container);
 
 
