@@ -20,11 +20,13 @@ namespace LivrariaUnreal.Infra.Repositorio
         public void Adicionar(Livro entidade)
         {
             _db.Set<Livro>().Add(entidade);
+            _db.SaveChanges();
         }
 
         public void Atualizar(Livro entidade)
         {
             _db.Entry(entidade).State = EntityState.Modified;
+            _db.SaveChanges();
         }
 
         public void Excluir(int[] ids)
@@ -33,6 +35,7 @@ namespace LivrariaUnreal.Infra.Repositorio
             {
                 var livro = ObterPorId(item);
                 _db.Set<Livro>().Remove(livro);
+                _db.SaveChanges();
             }            
         }
 
@@ -40,6 +43,7 @@ namespace LivrariaUnreal.Infra.Repositorio
         {
             var livro = ObterPorId(id);
             _db.Set<Livro>().Remove(livro);
+            _db.SaveChanges();
         }
 
         public Livro ObterPorId(int id)

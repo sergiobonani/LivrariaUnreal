@@ -1,0 +1,36 @@
+﻿<div class="col-md-12">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover" style="width:800px">
+            <tr>
+                <th>Id</th>
+                <td>Titulo</td>
+                <td>Descricao</td>
+                <td>Isbn</td>
+            </tr>
+            <tr data-ng-repeat="livro in livros | orderBy:'Titulo'">
+                <td><strong data-ng-hide="livro.editMode">{{ livro.Id }}</strong></td>
+                <td>
+                    <p data-ng-hide="livro.editMode">{{ livro.Titulo }}</p>
+                    <input data-ng-show="livro.editMode" type="text" data-ng-model="livro.Titulo" />
+                </td>
+                <td>
+                    <p data-ng-hide="livro.editMode">{{ livro.Descricao }}</p>
+                    <input data-ng-show="livro.editMode" type="text" data-ng-model="livro.Descricao" />
+                </td>
+                <td>
+                    <p data-ng-hide="livro.editMode">{{ livro.Isbn }}</p>
+                    <input data-ng-show="livro.editMode" type="text" data-ng-model="livro.Isbn" />
+                </td>
+                <td>
+                    <p data-ng-hide="livro.editMode">
+                        <a data-ng-click="toggleEdit(livro)">Editar</a> | <a data-ng-click="deleteLivro(livro)">Remover</a>
+                    </p>
+                    <p data-ng-show="livro.editMode">
+                        <a data-ng-click="editLivro(livro)">Salvar</a> | <a data-ng-click="toggleEdit(livro)">Cancelar</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <hr />
+    </div>
+</div>

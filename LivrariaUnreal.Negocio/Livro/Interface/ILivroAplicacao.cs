@@ -5,7 +5,7 @@ namespace LivrariaUnreal.Negocio.Livro.Interface
 {
     public interface ILivroAplicacao
     {
-        void Persistir(LivroRequest request);
+        int Persistir(LivroRequest request);
 
         void Excluir(int[] ids);
 

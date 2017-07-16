@@ -24,12 +24,19 @@ namespace LivrariaUnreal.Query.Livro
         {
             var livros = _repositorio.ObterTodos();
 
+            if (livros.Count() == 0)
+            {
+                return new List<LivroListagemDto>();
+            }
+
             var retorno = (from livro in livros
                            select new LivroListagemDto
                            {
                                Id = livro.Id,
-                               Descricao = livro.Descricao
-                           }).ToList();
+                               Descricao = livro.Descricao,
+                               Titulo = livro.Titulo,
+                               Isbn = livro.Isbn
+                           }).OrderBy(x => x.Titulo).ToList();
 
             return retorno;
         }

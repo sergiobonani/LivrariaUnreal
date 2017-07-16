@@ -1,5 +1,6 @@
 ﻿using LivrariaUnreal.Facade.Livro.Interface;
 using LivrariaUnreal.Facade.Livro.Request;
+using System;
 
 namespace LivrariaUnreal.Facade.Livro
 {
@@ -14,10 +15,10 @@ namespace LivrariaUnreal.Facade.Livro
 
             return new Dominio.Entidades.Livro
             {
-               Id = request.Id,
-               Descricao = request.Descricao,
-               Isbn = request.Isbn,
-               TipoLivro = request.TipoLivro
+                Id = request.Id,
+                Descricao = request.Descricao,
+                Isbn = request.Isbn,
+                Titulo = request.Titulo
             };
         }
     }

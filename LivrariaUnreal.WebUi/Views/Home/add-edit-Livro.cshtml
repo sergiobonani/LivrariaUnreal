@@ -1,0 +1,25 @@
+﻿<div class="form-group">
+    <label for="address" class="col-sm-2 control-label">Titulo:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="address" data-ng-model="livro.Titulo" required />
+    </div>
+</div>
+<div class="form-group">
+    <label for="cname" class="col-sm-2 control-label">Descricao:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="cname" data-ng-model="livro.Descricao" required />
+    </div>
+</div>
+<div class="form-group">
+    <label for="address" class="col-sm-2 control-label">Isbn:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="isbn" data-ng-model="livro.Isbn" required />
+    </div>
+</div>
+<br />
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" value="Salvar" data-ng-click="addLivro()" class="btn btn-primary" />
+        <input type="button" value="Cancelar" data-ng-click="toggleAdd()" class="btn btn-primary" />
+    </div>
+</div>

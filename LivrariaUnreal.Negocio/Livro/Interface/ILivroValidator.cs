@@ -5,6 +5,6 @@ namespace LivrariaUnreal.Negocio.Livro.Interface
 {
     public interface ILivroValidator
     {
-        IList<Exception> Validar(Dominio.Entidades.Livro entidade);
+        void Validar(Dominio.Entidades.Livro entidade);
     }
 }

@@ -11,7 +11,7 @@ namespace LivrariaUnreal.Infra.Map
 
             Property(x => x.Descricao).IsRequired();
 
-            Property(x => x.TipoLivro);
+            Property(x => x.Titulo).IsRequired();
 
             Property(x => x.Isbn);
         }

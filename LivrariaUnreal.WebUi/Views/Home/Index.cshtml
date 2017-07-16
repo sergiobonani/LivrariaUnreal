@@ -1,0 +1,24 @@
+﻿<div data-ng-controller="livroController" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <strong class="error">{{ error }}</strong>   
+            <br />
+            <br />
+            <p data-ng-hide="addMode"><a data-ng-click="toggleAdd()" href="javascript:;" class="btn btn-primary">Novo livro</a></p>
+            <div class="row" data-ng-show="addMode" style="width:600px;margin:0px auto;">
+                <div class="col-md-12">
+                    @Html.Partial("add-edit-Livro")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row" data-ng-show="!addMode">
+        @Html.Partial("listagem-Livro")
+    </div>
+</div>

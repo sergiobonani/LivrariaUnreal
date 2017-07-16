@@ -113,5 +113,14 @@ namespace Recursos {
                 return ResourceManager.GetString("Romance", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Titulo.
+        /// </summary>
+        public static string Titulo {
+            get {
+                return ResourceManager.GetString("Titulo", resourceCulture);
+            }
+        }
     }
 }

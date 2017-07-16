@@ -7,13 +7,13 @@ namespace LivrariaUnreal.Infra.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Create_Livros : IMigrationMetadata
+    public sealed partial class Create_Livro : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_Livros));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Create_Livro));
         
         string IMigrationMetadata.Id
         {
-            get { return "201707100417518_Create_Livros"; }
+            get { return "201707160012566_Create_Livro"; }
         }
         
         string IMigrationMetadata.Source

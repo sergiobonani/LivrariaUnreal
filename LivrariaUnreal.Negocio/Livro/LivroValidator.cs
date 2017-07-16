@@ -15,7 +15,7 @@ namespace LivrariaUnreal.Negocio.Livro
         {
             _repositorio = repositorio;
         }
-        public IList<Exception> Validar(Dominio.Entidades.Livro entidade)
+        public void Validar(Dominio.Entidades.Livro entidade)
         {
             var excecoes = new List<Exception>();
 
@@ -23,7 +23,7 @@ namespace LivrariaUnreal.Negocio.Livro
             {
                 var mensagem = string.Format(Geral.CampoObrigatorio, Geral.Descricao);
 
-                excecoes.Add(new Exception(mensagem));
+                throw new Exception(mensagem);
             }
 
             if (_repositorio.ObterTodos().Any(x => 
@@ -31,10 +31,16 @@ namespace LivrariaUnreal.Negocio.Livro
             {
                 var mensagem = string.Format(Geral.RegistroDuplicado, Geral.Descricao);
 
-                excecoes.Add(new Exception(mensagem));
+                throw new Exception(mensagem);
             }
 
-            return excecoes;
+            if (_repositorio.ObterTodos().Any(x =>
+            x.Titulo.ToUpper().Contains(entidade.Titulo.ToUpper()) && x.Id != entidade.Id))
+            {
+                var mensagem = string.Format(Geral.RegistroDuplicado, Geral.Titulo);
+
+                throw new Exception(mensagem);
+            }
         }
     }
 }

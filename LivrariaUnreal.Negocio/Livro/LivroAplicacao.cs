@@ -33,7 +33,7 @@ namespace LivrariaUnreal.Negocio.Livro
             _repositorio.Excluir(id);
         }
 
-        public void Persistir(LivroRequest request)
+        public int Persistir(LivroRequest request)
         {
             var entidade = _livroFactory.Criar(request);
 
@@ -46,7 +46,9 @@ namespace LivrariaUnreal.Negocio.Livro
             else
             {
                 _repositorio.Atualizar(entidade);
-            }            
+            }
+
+            return entidade.Id;
         }
     }
 }

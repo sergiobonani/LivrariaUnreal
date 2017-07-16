@@ -12,7 +12,7 @@ namespace LivrariaUnreal.Infra.Contexto
 {
     public class ContextoData : DbContext
     {
-        public ContextoData() : base("stringConexao") { }
+        public ContextoData() : base("LivrariaUnreal") { }
 
         public DbSet<Livro> Livros { get; set; }
 

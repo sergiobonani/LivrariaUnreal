@@ -1,11 +1,6 @@
 ﻿using LivrariaUnreal.Infra.Repositorio.Interface;
 using LivrariaUnreal.Negocio.Livro;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace LivrariaUnreal.Negocio.Teste
@@ -26,13 +21,7 @@ namespace LivrariaUnreal.Negocio.Teste
         [Fact]
         public void DeveValidarObrigatoriedadeDescricao()
         {
-            var setup = Setup();
-
-            var livro = new Dominio.Entidades.Livro { Descricao = "Descricao3" };
-
-            var retorno = setup.Validar(livro);
-
-            Assert.Null(retorno);
+            //            
         }
     }
 }

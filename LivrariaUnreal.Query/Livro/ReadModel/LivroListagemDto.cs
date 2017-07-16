@@ -6,6 +6,8 @@
 
         public string Descricao { get; set; }
 
-        public string TipoLivro { get; set; }
+        public string Titulo { get; set; }
+
+        public string Isbn { get; set; }
     }
 }

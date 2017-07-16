@@ -11,8 +11,6 @@ namespace LivrariaUnreal.Dominio.Entidades
 
         public string Isbn { get; set; }
 
-        public TipoLivro TipoLivro { get; set; }
-
-        public DateTime DataCriação { get; set; }
+        public string Titulo { get; set; }
     }
 }

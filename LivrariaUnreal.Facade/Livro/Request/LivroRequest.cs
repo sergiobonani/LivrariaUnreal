@@ -10,6 +10,6 @@ namespace LivrariaUnreal.Facade.Livro.Request
 
         public string Isbn { get; set; }
 
-        public TipoLivro TipoLivro { get; set; }
+        public string Titulo { get; set; }
     }
 }
